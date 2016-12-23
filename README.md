@@ -1,20 +1,22 @@
 # error-handle
-Estava iniciando começando um novo projeto, percebi o quão chato, e impreciso é lidar com erros.
-Geralmente em muitas libs, ou exemplo que vejo no github, o tratamento de erro utilizado é um simples `Error("msg")`, e pronto.
+Estava iniciando começando um novo projeto, percebi o quão chato e impreciso é lidar com erros.
+Geralmente em muitas libs, ou exemplo que vejo no github, o tratamento de erro utilizado é um simples `Error("msg")` e pronto.
 Sinceramente não está errado, mas também você não irá conseguir ter um maior controle, alias até consegue se invés da mensagem você passar código, e no handle do catch você trata esse erro. Mas isso ai já está ficando um pouco chato de mais, e provavelmente você em alguma hora esquecerá tratar esse erro.
 
-Pensando exatamente nisso tive uma ideia de um lib para fazer tudo isso.
+Pensando exatamente nisso, tive uma ideia de uma lib para fazer tudo isso.
 
 Tive a ideia de criar 
 
 ##Níveis
-A ideia é o programador ter controle e poder total de tudo, sem muito esforço. 
->Calma, eu explico isso.
 
-Existem vários tipos de erros, e alguns erros tem que ser melhor tratado que outros. Alguns tem que ser enviados logs por email, ou colocado no DB.
+A ideia é o programador ter controle e poder total de tudo, sem muito esforço. 
+
+> Calma, eu explico isso.
+
+Existem vários tipos de erros, logo alguns erros tem que ser melhor tratados que outros. Alguns tem que enviar logs por email ou colocado no DB.
 Se você usar da forma `Error("msg")` você terá que tratar no `catch`.
-Como os níveis novos quando for carregar os erros na sua aplicação você poderá configurar isso.
-Existem 3 tipos de erros, e eles são.
+Com os níveis novos quando for carregar os erros na sua aplicação você poderá configurar isso.
+Existem 3 tipos de erros e eles são.
 
 **1. BaseError**
 
